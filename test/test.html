@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var count = 0, summ = 0, output = "";
+        
+        if (confirm("Есть ли у покупателя товар?")){
+            
+            while(true){
+                
+                summ += +prompt("Цена товара","0");
+                count++;
+                
+                if(confirm("Нажать 'Итого'?"))
+                    break;
+            }    
+            
+            if(confirm('Оплачивать будете картой?')){
+                
+                for(var i = 1; i <= 3; i++){
+                    if("1111" == prompt("Введите пин-код", '')){
+                        alert("Количество товаров: " + count + "\nНа сумму: " + summ);
+                        break;
+                    }
+                }
+            }else{
+                alert("Количество товаров: " + count + "\nНа сумму: " + summ);
+            }
+        }
+        
+    </script>
+</body>
+</html>
